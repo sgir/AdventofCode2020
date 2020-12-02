@@ -8,7 +8,7 @@ let counter = 0;
 async function processLineByLine (){
     let input = [];
     const readInterface = readLine.createInterface({
-        input: fs.createReadStream('/Users/i850773/Developer/poc/AdventofCode/Day2/input.txt'),
+        input: fs.createReadStream('path2/AdventofCode/Day2/input_1.txt'),
         output: process.stdout,
         crlfDelay: Infinity,
         console: false

@@ -8,7 +8,7 @@ let counter = 0;
 async function processLineByLine (){
     let input = [];
     const readInterface = readLine.createInterface({
-        input: fs.createReadStream('/Users/i850773/Developer/poc/AdventofCode/Day2/input.txt'),
+        input: fs.createReadStream('path2/AdventofCode/Day2/input.txt'),
         output: process.stdout,
         crlfDelay: Infinity,
         console: false
@@ -65,9 +65,16 @@ console.log(findValidPassword());
 
 
 function isValid(min, max,letter, passwordArray){
-   let countArray = passwordArray.filter(alphabet => {
-       return alphabet==letter
-    });
-
-    return (countArray.length>=min&&countArray.length<=max)
+    let pos1 = passwordArray[min-1].includes(letter);
+    let pos2 = passwordArray[max-1].includes(letter);
+    
+    if(pos1&&pos2){
+        return false
+    } else if(pos1||pos2){
+        return true
+    } else {
+        return false
+    }
 }
+    
+
