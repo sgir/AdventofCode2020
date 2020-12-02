@@ -91,7 +91,7 @@ var binarySearch = function(nums, target,i) {
     }
     else if(mid==target-arrayInput[i]){
         console.log('equal')
-        return mid;
+        return mid; // put a breakpoint here to read final result.
     } else { //no match
         return
     }
