@@ -1,14 +1,13 @@
 const fs = require('fs');
 const readLine = require('readline');
 let arrayInput;
-let counter = 0;
 //1. read input into an array
 // don't do this - won't work for big files as it reads all into memory
 // const input = fs.readFileSync('/Users/i850773/Developer/poc/AdventofCode/Day1/input.txt', 'utf-8').split(/\r?\n/) (err,data) => {
 async function processLineByLine (){
     let input = [];
     const readInterface = readLine.createInterface({
-        input: fs.createReadStream('/Users/i850773/Developer/poc/AdventofCode/Day3/input.txt'),
+        input: fs.createReadStream('/path2/AdventofCode/Day3/input_2.txt'),
         crlfDelay: Infinity,
         console: false
     });
@@ -27,7 +26,7 @@ async function processLineByLine (){
  * @return {number}
  */
 
-async function findTobaggonTrajectory(slopeX,slopeY){
+async function findTobaggonTrajectory(slopeX,slopeY){ 
     var primeX =0;
     var primeY = 0;
     var openCount =0;
@@ -49,9 +48,16 @@ async function findTobaggonTrajectory(slopeX,slopeY){
             twoDArray[primeY,primeX]==='X';
             treeCount = treeCount+1;
             console.log("tree",treeCount)
-        } //find element
+        } //find element 
     }
-    console.log(twoDArray)
+    return treeCount
 }
 
-console.log(findTobaggonTrajectory(3,1));
+console.log(findTobaggonTrajectory(7,1));
+
+
+// (3,1) => 178
+// (1,1) => 78
+// (5,1) => 75
+// (7,1) => 86
+// (1,2) => 39
