@@ -1,4 +1,4 @@
 # AdventofCode2020
 
 https://adventofcode.com/2020
-Your get on Santa's #naughtylist if you come looking for answers here!
+You get on Santa's #naughtylist if you come looking for answers here!
