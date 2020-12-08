@@ -6,7 +6,7 @@ let largetstSeatNumber;
 async function processLineByLine (){
     let input = [];
     const readInterface = readLine.createInterface({
-        input: fs.createReadStream('/Users/i850773/Developer/poc/AdventofCode/Day6/input.txt'),
+        input: fs.createReadStream('/path2/poc/AdventofCode/Day6/input.txt'),
         crlfDelay: Infinity,
         console: false
     });
